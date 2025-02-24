@@ -1,0 +1,14 @@
+<script setup>
+import { RouterLink, RouterView } from "vue-router";
+</script>
+
+<template>
+  <RouterView />
+</template>
+
+<style scoped>
+* {
+  box-sizing: border-box;
+  margin: 0 !important;
+}
+</style>
