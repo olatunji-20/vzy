@@ -6,9 +6,17 @@ import { RouterLink, RouterView } from "vue-router";
   <RouterView />
 </template>
 
-<style scoped>
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
 * {
   box-sizing: border-box;
-  margin: 0 !important;
+}
+body {
+  margin: 0px !important;
+}
+#app {
+  font-family: "Orbitron", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 </style>

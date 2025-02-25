@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <h1>{{ poll.question }}</h1>
     <Transition name="result" mode="out-in">
       <div v-if="!result" class="options-container">
@@ -91,6 +91,12 @@ onMounted(async () => {
 </script>
 
 <style scoped>
+.container {
+  border: 1px solid #e6e6e6;
+  padding: 30px 10px;
+  border-radius: 10px;
+}
+
 .options-container {
   margin-top: 50px;
   padding: 35px 0px;
@@ -119,6 +125,14 @@ onMounted(async () => {
 .button-container button {
   padding: 10px 20px;
   cursor: pointer;
+  background-color: tomato;
+  border: 0;
+  border-radius: 5px;
+  color: floralwhite;
+}
+
+.button-container button:hover {
+  opacity: 0.7;
 }
 
 .result-enter-active,
@@ -130,5 +144,11 @@ onMounted(async () => {
 }
 .result-leave-to {
   transform: translateX(-100%);
+}
+
+@media only screen and (max-width: 480px) {
+  h1 {
+    font-size: 25px;
+  }
 }
 </style>
